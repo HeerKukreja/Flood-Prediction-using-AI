@@ -4,7 +4,7 @@
 \usepackage[table,xcdraw]{xcolor}
 
 
-\title{My first document}
+\title{Identifying flood risk zones along rivers and analyse the major contributing factors to flooding in the area  }
 \author{Haruyaa}
 
 \begin{document}
@@ -13,13 +13,19 @@
 		Predicting floods in coastal regions as a direct consequence of deforestation.
 	\section*{Introduction/Motivation}
 		The degree and scale of flood hazards have increased massively with the changing climate in the last decades, and large-		scale flash floods bring fast-moving and rapid-rising water with force, resulting in tremendous life and property losses as well as social disruption worldwide. Cutting of mangroves and trees in coastal regions and river plains for land development has led to decreasing water retention and increasing surface runoff which in turn increases the probability of flash floods. Thus, flood prediction and flood control are important issues for policy makers and designers. To mimic the complex mathematical expressions of physical processes of floods, during the past two decades, machine learning (ML) methods and Artificial intelligence (AI) contributed highly in the advancement of prediction systems providing better performance and cost-effective solutions.
-Flooding in coastal areas depends on factors such as rainfall, sea tides, bank heights, man-made structures like embankments and reservoirs and mangroves and forest cover. Our proposed system will identify food prone regions and link flooding to deforestation in the area to allow sustainable growth in the future by giving afforestation as a solution to mitigate effects of floods.   
+Flooding depends on factors such as rainfall, elevation, bank heights, drainage distance, soil properties and land use. Our proposed system will identify food prone regions and link flooding to deforestation in the area to allow sustainable growth in the future by giving afforestation as a solution to mitigate effects of floods.   
 	\section*{Market Research / Literature Survey:}
-		Many ML algorithms, e.g., artificial neural networks (ANNs), neuro-fuzzy, support vector machine (SVM), and support vector regression (SVR), have been employed for flood-prediction and were reported as effective for both short-term and long-term flood forecast. 
-The performance of any Machine Learning method in flood prediction can be improved through hybridization with other ML methods. Such applications provide more robust and efficient models that can effectively learn complex flood systems in an adaptive manner. 
+		Many ML algorithms, e.g., artificial neural networks (ANNs), neuro-fuzzy, support vector machine (SVM), and support vector regression (SVR), have been employed for flood-prediction and were reported as effective for both short-term and long-term flood forecast. However, the datasets required to implement and verify such models are not available in data-scarce regions.The application of GIS-based methods allow us to create a flood prdiction models using data that are globally available. Such applications provide more robust and efficient models that can effectively learn complex flood systems in an adaptive manner. 
 	\section{Hardware requirements:}
 		None
-\section*{Software requirements:}
+	\section*{Software requirements:}
+\begin{itemize}
+\item[$\bullet$] Scikit-learn
+\item[$\bullet$] Tensorflow
+\item[$\bullet$] Azure Machine Learning Lab
+\item[$\bullet$] Keras.io
+\item[$\bullet$] ArcGIS Online
+\end{itemize}
 \begin{table}[]
 \begin{tabular}{|l|l|l|l|}
 \hline
@@ -40,9 +46,7 @@ Storage Accounts               &                      & West India      & \begin
 
 
 	\section*{Implementation:}
-		Our project aims at predicting floods in various susceptible coastal areas. The risk of coastal flooding is increasing as a result of deforestation, untimely and torrential rains, sea level rise etc. In the event of floods occurring, a large amount of damage can be curbed if we have a model that could predict floods in advance. To avoid devastating consequences which have a major impact on economic and financial conditions of the city, our system aims to provide maximum accuracy in alerting target regions about the forthcoming disasters. This model can be extended for different locations in the future.
-One of the major factors causing floods is heavy rainfall, along with catchment and weather conditions before rainfall, tidal influences, inadequate drainage system, lack of reservoirs and catchment areas, deforestation, etc. With this model of predicting floods because of deforestation based on ML will provide clear and efficient output of forecasting the flood in the coastal regions. The model will take images from satellite, classify images based on the factors required and process the input dataset.
-
+		Our project aims at predicting floods in various susceptible areas along water bodies. The risk of flooding is increasing as a result of deforestation, untimely and torrential rains, sea level rise, concretization and unscentific developement etc. In the event of floods occurring, a large amount of damage can be curbed if we have a model that could predict floods in advance. To avoid devastating consequences which have a major impact on economic and financial conditions of the city, our system aims to provide maximum accuracy in alerting target regions about the forthcoming disasters. This model can be extended for different locations in the future.
 \begin{figure}
 	\includegraphics[width=\linewidth]{journeymap.png}
 	\caption{Journey Map from adverse effects of floods \& deforestation to a greener and sustainable future.}
@@ -50,7 +54,7 @@ One of the major factors causing floods is heavy rainfall, along with catchment 
 \end{figure}
 
 Figure \ref{fig:map}
-
+Flood-influencing factors as independent variables are essential to generate a flood susceptibility map (Liu \& De Smedt, 2005). Kia et al. (2012) argued that the contributing parameters used for specific study areas may have no impact in other regions, therefore variable selection should be case-specific. In such case, scarcity of data can limit the the number of models that can be used to identify flood risk zones. A possible solution to this can be the use of GIS (Geographical Information System) based models to provide a more accurate prediction.  GIS coupled with various models have been used before to create flood susceptibility maps. Out of these ANNs (Artificial Neural Netwoks) and SVMs (State Vector Machines) have shown promise in accuracy of prediction. Depending onthe region in focus, and the data available we will use one of the models to accurately identify flood risk regions. Analysing the factors afecting the floods using the learning vector quantization process(LVQ) will help us identify the major contributing factor. 
 We will use statistical data based on various factors, maps and images. The datasets can either be real-time data collected from Synthetic Aperture Radar(SAR) or historical data recorded before.   
 
 	\section*{Feasibility:}
